@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,34 +13,50 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
 
+    <!--    fonts-->
+    <script>
+  (function(d) {
+    var config = {
+      kitId: 'zcl2yhl',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira">
+
     <title>{% block title %}{% endblock %} | Tongji-Software - iGEM 2023</title>
 
 </head>
 <body>
-  <!-- Navigation -->
-  {% include 'menu.html' %}
+<!-- Navigation -->
+{% include 'menu.html' %}
 
-  <!-- Header -->
-  <header class="bg-hero py-5 mb-5">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">{{ self.title() }}</h1>
-	        <p class="lead mb-5 text-white-50">{% block lead %}{% endblock %}</p>
-        </div>
-      </div>
-    </div>
-  </header>
+<!-- Header -->
+<!--  <header class="bg-hero py-5 mb-5">-->
+<!--    <div class="container h-100">-->
+<!--      <div class="row h-100 align-items-center">-->
+<!--        <div class="col-lg-12">-->
+<!--          <h1 class="display-4 text-white mt-5 mb-2">{{ self.title() }}</h1>-->
+<!--	        <p class="lead mb-5 text-white-50">{% block lead %}{% endblock %}</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </header>-->
+<header>
+    {% block header %}{% endblock %}
+</header>
 
-  <!-- Page Content -->
-  <div class="container">
+<!-- Page Content -->
+<div class="page-content">
     {% block page_content %}{% endblock %}
-  </div>
+</div>
 
-  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
-  {% include 'footer.html' %}
+<!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+<!--{% include 'footer.html' %}-->
 
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+<!-- Bootstrap Bundle with Popper -->
+<script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
