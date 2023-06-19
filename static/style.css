@@ -1,7 +1,9 @@
-body { padding-top: 56px; }
+body { padding-top: 56px;background-color:Pink;width:1200px;}
 .left-aligned { margin-left: auto; }
 .bg-dark { background-color: #343a40 !important; }
 .bg-hero { background-color: #45b06cff; }
+
+
 
 /* CALLOUT */
 .bd-callout { padding:1.25rem; margin-top:1.25rem; margin-bottom:1.25rem; border:1px solid #e9ecef; border-left-width:.25rem; border-radius:.25rem }
@@ -16,3 +18,319 @@ body { padding-top: 56px; }
 /* footer */
 footer a { color: white; font-weight: bold; text-decoration: none; }
 footer a:hover { color: white; text-decoration: underline; }
+
+/* description */
+.ds-header-capital{
+box-sizing: border-box;
+
+position: absolute;
+width: 335px;
+height: 240px;
+left: -183px;
+top: 232px;
+
+background: #FFFFFF;
+border: 1px solid #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 48px;}
+
+.ds-header-D{
+position: absolute;
+width: 70px;
+height: 156px;
+left: -18px;
+top: 120px;
+
+font-family: "otomanopee-one", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-size: 240px;
+line-height: 434px;
+letter-spacing: 0.015em;
+
+color: rgba(255, 165, 165, 0.9);}
+
+.ds-header-escription{
+position: absolute;
+width: 971px;
+height: 199px;
+left: 203px;
+top: 310px;
+
+font-family: "otomanopee-one", sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 128px;
+line-height: 185px;
+letter-spacing: 0.015em;
+
+color: rgba(255, 255, 255, 0.9);
+}
+
+.ds-content-why1{
+box-sizing: border-box;
+
+position: absolute;
+width: 85%;
+height: 400px;
+right: 0;
+margin-top: 500px;
+
+background: #F2ACBB;
+border: 1px solid #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px 0 0 20px;
+}
+
+.ds-content-why2{
+ box-sizing: border-box;
+
+position: absolute;
+width: 85%;
+height: 500px;
+right: 0px;
+margin-top: 1000px;
+
+background: #F2ACBB;
+border: 1px solid #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px 0 0 20px;
+}
+
+.ds-content-how{
+ box-sizing: border-box;
+
+position: absolute;
+width: 85%;
+height: 450px;
+right: 0px;
+margin-top: 1600px;
+
+background: #77AADF;
+border: 1px solid #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px 0 0 20px;
+}
+
+.ds-content-what1{
+ box-sizing: border-box;
+
+position: absolute;
+width: 85%;
+height: 450px;
+right: 0px;
+margin-top: 2150px;
+
+background: #65B79A;
+border: 1px solid #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px 0 0 20px;
+}
+
+.ds-content-what2{
+ box-sizing: border-box;
+
+position: absolute;
+width: 85%;
+height: 620px;
+right: 0px;
+margin-top: 2700px;
+
+background: #65B79A;
+border: 1px solid #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px 0 0 20px;
+}
+
+.ds-content-distinct1{
+ box-sizing: border-box;
+
+position: absolute;
+width: 85%;
+height: 400px;
+right: 0px;
+margin-top: 3420px;
+
+background: #F4C263;
+border: 1px solid #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px 0 0 20px;
+}
+
+.ds-content-distinct2{
+ box-sizing: border-box;
+
+position: absolute;
+width: 85%;
+height: 400px;
+right: 0px;
+margin-top: 3920px;
+
+background: #F4C263;
+border: 1px solid #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px 0 0 20px;
+}
+
+.ds-bottom-letters{
+position: absolute;
+width: 600px;
+height: 560px;
+left: 0;
+margin-top:4250px;
+
+background-image: url("https://static.igem.wiki/teams/4787/wiki/description/bottom-letters.svg");
+mix-blend-mode: color-burn;
+}
+
+.ds-yellow-man{
+position:absolute;
+width:100px;
+height:120px;
+right:250px;
+margin-top:4690px;
+background-image: url("https://static.igem.wiki/teams/4787/wiki/description/yellow-man.png");
+background-position: center top; /* 将背景图片的位置设置为居中顶部 */
+  background-repeat: no-repeat; /* 禁止背景图片的重复显示 */
+}
+
+.ds-pink-man{
+position:absolute;
+width:100px;
+height:120px;
+right:150px;
+margin-top:4690px;
+background-image: url("https://static.igem.wiki/teams/4787/wiki/description/pink-man.png");
+background-position: center top; /* 将背景图片的位置设置为居中顶部 */
+  background-repeat: no-repeat; /* 禁止背景图片的重复显示 */
+}
+
+.ds-green-man{
+position:absolute;
+width:100px;
+height:120px;
+right:50px;
+margin-top:4690px;
+background-image: url("https://static.igem.wiki/teams/4787/wiki/description/green-man.png");
+background-position: center top; /* 将背景图片的位置设置为居中顶部 */
+  background-repeat: no-repeat; /* 禁止背景图片的重复显示 */
+}
+
+.ds-content-why1-icon{
+position: absolute;
+width: 220px;
+height: 331px;
+right:0px;
+margin-top:100px;
+background-image:url("https://static.igem.wiki/teams/4787/wiki/description/pinkicon.svg");
+}
+
+.ds-content-why2-icon{
+position: absolute;
+width: 220px;
+height: 331px;
+right:0px;
+margin-top:200px;
+background-image:url("https://static.igem.wiki/teams/4787/wiki/description/pinkicon.svg");
+}
+
+.ds-content-how-icon{
+position: absolute;
+width: 220px;
+height: 331px;
+right:0px;
+margin-top:150px;
+background-image:url("https://static.igem.wiki/teams/4787/wiki/description/blueicon.svg");
+}
+
+.ds-content-what1-icon{
+position: absolute;
+width: 220px;
+height: 331px;
+right:0px;
+margin-top:150px;
+background-image:url("https://static.igem.wiki/teams/4787/wiki/description/greenicon.svg");
+}
+
+.ds-content-what2-icon{
+position: absolute;
+width: 220px;
+height: 331px;
+right:0px;
+margin-top:320px;
+background-image:url("https://static.igem.wiki/teams/4787/wiki/description/greenicon.svg");
+}
+
+.ds-content-distinct1-icon{
+position: absolute;
+width: 220px;
+height: 331px;
+right:0px;
+margin-top:100px;
+background-image:url("https://static.igem.wiki/teams/4787/wiki/description/yellowicon.svg");
+}
+
+.ds-content-distinct2-icon{
+position: absolute;
+width: 220px;
+height: 331px;
+right:0px;
+margin-top:100px;
+background-image:url("https://static.igem.wiki/teams/4787/wiki/description/yellowicon.svg");
+}
+
+
+.ds-content-circle{
+box-sizing: border-box;
+
+position: absolute;
+width: 63px;
+height: 63px;
+left: 20px;
+margin-top:10px;
+
+background: #FFFFFF;
+border: 1px solid #FFFFFF;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 117px;}
+
+.ds-content-title{
+position: absolute;
+width: 75%;
+height: 101px;
+left:93px;
+margin-top:53px;
+font-family: 'Saira', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 60px;
+/* identical to box height */
+
+letter-spacing: 0.015em;
+
+color: rgba(0, 0, 0, 0.9);
+}
+.ds-content-title::first-letter {
+  font-size: 64px; /* 设置首字母的字体大小 */
+}
+
+.ds-content-text{
+position: absolute;
+width: 75%;
+height: 77%;
+left: 95px;
+margin-top: 120px;
+
+font-family: 'Saira', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 21px;
+line-height: 30px;
+letter-spacing: 0.015em;
+color: rgba(0, 0, 0, 0.9);
+overflow: hidden;
+  text-overflow: ellipsis;
+}
+
