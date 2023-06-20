@@ -1,20 +1,18 @@
 html {
   height: 100%;
-  margin: 0;
+  background: linear-gradient(180.17deg, #FFB3B3 -1.23%, rgba(255, 255, 255, 0.542859) 36.39%, rgba(255, 255, 255, 0.575405) 60.41%, rgba(255, 187, 191, 0.63) 96.65%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background: linear-gradient(to bottom, #ffb2b2, white, #ffb2b2);
 }
 
 body {
-  background: transparent;
+  min-height: 100vh;
   margin: 0;
-  height: 100%;
+  background: transparent;
   padding-top: 56px;
   width:1200px;
+  box-sizing: border-box;
 }
-
-
 
 .left-aligned { margin-left: auto; }
 .bg-dark { background-color: #343a40 !important; }
@@ -68,22 +66,23 @@ letter-spacing: 0.015em;
 
 color: rgba(255, 165, 165, 0.9);}
 
-.ds-header-escription{
-position: absolute;
-width: 971px;
-height: 199px;
-left: 203px;
-top: 310px;
-
-font-family: "otomanopee-one", sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 128px;
-line-height: 185px;
-letter-spacing: 0.015em;
-
-color: rgba(255, 255, 255, 0.9);
+.ds-header-escription {
+  position: absolute;
+  width: 971px;
+  height: 199px;
+  left: 203px;
+  top: 310px;
+  font-family: "otomanopee-one", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 185px;
+  letter-spacing: 0.015em;
+  color: #FFFFFF;  /* 字体颜色为白色 */
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6); /* 水平阴影2px, 垂直阴影2px, 模糊半径3px, 颜色为半透明的黑色 */
 }
+
+
 
 .ds-content-why1{
 box-sizing: border-box;
@@ -192,12 +191,11 @@ border-radius: 20px 0 0 20px;
 
 .ds-bottom-letters{
 position: absolute;
-width: 600px;
-height: 560px;
-left: 0;
-margin-top:4250px;
-
-background-image: url("https://static.igem.wiki/teams/4787/wiki/description/bottom-letters.svg");
+width: 800px;
+height: 700px;
+left: -110px;
+margin-top:4150px;
+background-image: url("https://static.igem.wiki/teams/4787/wiki/description/bottom-letters.png");
 mix-blend-mode: color-burn;
 }
 
