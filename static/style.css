@@ -1,4 +1,7 @@
-body { padding-top: 56px;background-color:Pink;width:1200px;}
+body { padding-top: 56px;background-color:Pink;width:1200px;
+  background: rgb(255,178,178);
+  background: linear-gradient(180deg, rgba(255,178,178,1) 0%, rgba(255,238,238,1) 30%, rgba(255,255,255,1) 50%, rgba(255,238,238,1) 70%, rgba(255,178,178,1) 100%);
+}
 .left-aligned { margin-left: auto; }
 .bg-dark { background-color: #343a40 !important; }
 .bg-hero { background-color: #45b06cff; }
