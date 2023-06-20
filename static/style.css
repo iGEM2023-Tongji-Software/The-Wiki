@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  /*渐变色*/
   background: linear-gradient(180.17deg, #FFB3B3 -1.23%, rgba(255, 255, 255, 0.542859) 36.39%, rgba(255, 255, 255, 0.575405) 60.41%, rgba(255, 187, 191, 0.63) 96.65%);
   background-repeat: no-repeat;
   background-attachment: fixed;
