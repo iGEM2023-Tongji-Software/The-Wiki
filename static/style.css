@@ -1,10 +1,21 @@
-body { padding-top: 56px;background-color:Pink;width:1200px;
+html {
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background: linear-gradient(to bottom, #ffb2b2, white, #ffb2b2);
 }
+
+body {
+  background: transparent;
+  margin: 0;
+  height: 100%;
+  padding-top: 56px;
+  width:1200px;
+}
+
+
+
 .left-aligned { margin-left: auto; }
 .bg-dark { background-color: #343a40 !important; }
 .bg-hero { background-color: #45b06cff; }
