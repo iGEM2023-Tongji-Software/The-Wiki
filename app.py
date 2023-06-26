@@ -3,6 +3,7 @@ from pathlib import Path
 
 from flask import Flask, render_template
 from flask_frozen import Freezer
+from datetime import timedelta
 
 
 template_folder = path.abspath('./wiki')
@@ -12,6 +13,14 @@ app = Flask(__name__, template_folder=template_folder)
 app.config['FREEZER_DESTINATION'] = 'public'
 app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_IGNORE_MIMETYPE_WARNINGS'] = True
+
+# 自动重载模板文件
+app.jinja_env.auto_reload = True
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
+# 设置静态文件缓存过期时间
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
+
 freezer = Freezer(app)
 
 @app.cli.command()
@@ -32,4 +41,4 @@ def pages(page):
 
 # Main Function, Runs at http://0.0.0.0:8080
 if __name__ == "__main__":
-    app.run(port=8080)
+    app.run(port=8080, debug=True)
