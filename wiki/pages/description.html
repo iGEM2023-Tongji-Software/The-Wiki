@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-  
+
 {% block header %}
 <div class="ds-header-capital"></div>
 <span class="ds-header-D">D</span>
@@ -9,58 +9,97 @@
 
 {% block page_content %}
 <div class="ds-total-layout">
-<div class="ds-content-why1">
-    <div class="ds-content-why1-icon"></div>
-    <div class="ds-content-circle"></div>
-    <p class="ds-content-title">Why This Project</p>
-    <p class="ds-content-text-why-p1">The COVID-19 pandemic has affected nearly everyone's life, and in the process of combating the pandemic, rapid and accurate virus detection methods are crucial. Traditional PCR virus detection methods must rely on laboratory facilities and the experimental procedures are extremely complex. It often takes several hours from sample collection to detection, making it difficult and inefficient to screen and diagnose individuals during a major outbreak, particularly in technologically underdeveloped areas.Therefore, the idea of using faster, simpler and cheaper infectious disease testing methods come to our mind,and we hope it can change the current situation.
-        
-    </p>
-    <p class="ds-content-text-why-p2">
-        Under the circumstances, we have found a new weapon for virus detection - a new detection tool based on the CRISPR-Cas system. Compared with traditional PCR methods, CRISPR-Cas detection tools are considered to have a good future, being more rapid, portable, economical and requiring less environmental equipment. Furthermore, the form of direct detection using test kits is also more friendly for impoverished areas affected by pandemic.In virus detection methods based on CRISPR system, the targeting efficiency of cas protein-bound gRNA (guide RNA) is a key factor for accurate detection. 
-    </p>
-    <p class="ds-content-text-why-p3">
-        We have learned that the majority of existing gRNA design  methods for virus detection only use one single CRISPR-Cas system to target a single or a few viruses systematically.Currently,there is a lack of a concise, rapid and accurate gRNA design tool for different viruses and different CRISPR-Cas systems. Therefore, related research can fill the gaps in the field of synthetic biology. 
-    </p>
-    <p class="ds-content-text-why-p4">
-        Thus, our project, CASleuth, was born.
-    </p>   
-</div>
-<!--
+    <div class="ds-content-why1">
+        <div class="ds-content-why1-icon"></div>
+        <div class="ds-content-circle"></div>
+        <p class="ds-content-title">Why This Project</p>
+        <p class="ds-content-text-why-p1">The COVID-19 pandemic has affected nearly everyone's life, and in the process
+            of combating the pandemic, rapid and accurate virus detection methods are crucial. Traditional PCR virus
+            detection methods must rely on laboratory facilities and the experimental procedures are extremely complex.
+            It often takes several hours from sample collection to detection, making it difficult and inefficient to
+            screen and diagnose individuals during a major outbreak, particularly in technologically underdeveloped
+            areas.Therefore, the idea of using faster, simpler and cheaper infectious disease testing methods come to
+            our mind,and we hope it can change the current situation.
+        </p>
+        <p class="ds-content-text-why-p2">
+            Under the circumstances, we have found a new weapon for virus detection - a new detection tool based on the
+            CRISPR-Cas system. Compared with traditional PCR methods, CRISPR-Cas detection tools are considered to have
+            a good future, being more rapid, portable, economical and requiring less environmental equipment.
+            Furthermore, the form of direct detection using test kits is also more friendly for impoverished areas
+            affected by pandemic.In virus detection methods based on CRISPR system, the targeting efficiency of cas
+            protein-bound gRNA (guide RNA) is a key factor for accurate detection.
+        </p>
+        <p class="ds-content-text-why-p3">
+            We have learned that the majority of existing gRNA design methods for virus detection only use one single
+            CRISPR-Cas system to target a single or a few viruses systematically.Currently,there is a lack of a concise,
+            rapid and accurate gRNA design tool for different viruses and different CRISPR-Cas systems. Therefore,
+            related research can fill the gaps in the field of synthetic biology.
+        </p>
+        <p class="ds-content-text-why-p4">
+            Thus, our project, CASleuth, was born.
+        </p>
+    </div>
+    <!--
  <div class="ds-content-why2">
     <div class="ds-content-why2-icon"></div>
     <div class="ds-content-circle"></div>
     <p class="ds-content-title">Why This Project</p>
      <p class="ds-content-text">Under the circumstances, we have found a new weapon for virus detection - a new detection tool based on the CRISPR-Cas system. Compared with traditional PCR methods, CRISPR-Cas detection tools are considered to have a good future, being more rapid, portable, economical and requiring less environmental equipment. Furthermore, the form of direct detection using test kits is also more friendly for impoverished areas affected by pandemic.In virus detection methods based on CRISPR system, the targeting efficiency of cas protein-bound gRNA (guide RNA) is a key factor for accurate detection. We have learned that the majority of existing gRNA design methods for virus detection only use one single CRISPR-Cas system to target a single or a few viruses systematically.Currently,there is a lack of a concise, rapid and accurate gRNA design tool for different viruses and different CRISPR-Cas systems. Therefore, related research can fill the gaps in the field of synthetic biology. Thus, our project, CASlueth, was born.</p>
 </div>-->
-<div class="ds-content-how">
-    <div class="ds-content-how-icon"></div>
-    <div class="ds-content-circle"></div>
-    <p class="ds-content-title">How We Start</p>
-    <p class="ds-content-text-how-p1">However, we didn’t know how to utilize our knowledge to improve the current situation of virus detection. Fortunately, after extensive research, we discovered that most traditional gRNA design tools focused on the gene editing instead of virus detection. This realization inspired us to create a gRNA design tool by recommending gRNA that could detect the target virus efficiently to reach our purpose of making large-scale virus detection easier. </p>
-    <p class="ds-content-text-how-p2">While exploring the iGEM projects of recent years, we have came across some CRISPR virus detection methods applied in synthetic biology but relevant software was quite rare. After consulting and communicating with our PI, We conducted a brainstorming session and finalized the details of our project. Following that, we started our project by collecting relevant gRNA data and applying methods such as deep learning.
-    </p>
-</div>
+    <div class="ds-content-how">
+        <div class="ds-content-how-icon"></div>
+        <div class="ds-content-circle"></div>
+        <p class="ds-content-title">How We Start</p>
+        <p class="ds-content-text-how-p1">However, we didn’t know how to utilize our knowledge to improve the current
+            situation of virus detection. Fortunately, after extensive research, we discovered that most traditional
+            gRNA design tools focused on the gene editing instead of virus detection. This realization inspired us to
+            create a gRNA design tool by recommending gRNA that could detect the target virus efficiently to reach our
+            purpose of making large-scale virus detection easier. </p>
+        <p class="ds-content-text-how-p2">While exploring the iGEM projects of recent years, we have came across some
+            CRISPR virus detection methods applied in synthetic biology but relevant software was quite rare. After
+            consulting and communicating with our PI, We conducted a brainstorming session and finalized the details of
+            our project. Following that, we started our project by collecting relevant gRNA data and applying methods
+            such as deep learning.
+        </p>
+    </div>
 
-<div class="ds-content-what1">
-    <div class="ds-content-what1-icon"></div>
-    <div class="ds-content-circle"></div>
-    <p class="ds-content-title">What We Are Doing</p>
-    <p class="ds-content-text-what-p1">Machine learning would benefit viral detection by designing assays that are more sensitive than existing ones.That is surprising in light of machine learning and the explosion of viral genomic data. Our project used a deep learning framework based on convolutional neural networks to analytically compute the relationship between gRNA sequence, target sequence and gRNA activity. After training, we developed a gRNA design tool applied to CRISPR virus detection to recommend gRNAs that can efficiently detect the target virus. We finally put the recommended results into the database we constructed.
-    </p>  
-    <p class="ds-content-text-what-p2">We believe that in the near future, CRISPR-based virus detection method will fill the gap of global healthcare system. We hope it will provide more opportunities for large-scale population screening, wider dissemination of diagnostic technologies and field deployment of diagnostics to control the spread of infectious diseases.
-    </p>
-    <p class="ds-content-text-what-br">A brief summary of the project process is as follows:<br>
-    1. Collect the guide sequences, target sequences, sequences before and after the target sequence and the corresponding fluorescence intensity enhancement rate for virus detection using cas13a protein.
-    <br>2. Collect the guide sequences, target sequences, chromatin accessibility information and insertion-deletion frequency of target sequences for cas12a protein and cas9 protein.
-    <br>3. Use the above collected data to train to predict the activity of gRNA in a deep learning framework based on convolutional neural networks .
-    <br>5. Rank the efficiency of gRNA from highest to lowest
-    <br>6. Design a gRNA design tool applied to Crispr virus detection to recommend gRNAs that can efficiently detect the target virus.
-    <br>7. Collect the gene sequences of different viruses and extract the target sequence and the corresponding candidate gRNAs from the gene sequences of different viruses
-    <br>8. Use our designed gRNA design tool to obtain gRNA that can detect the above virus efficiently
-    <br>9. Construct a database of different viruses and their corresponding efficient gRNAs applied to Crispr virus detection
-</p></div>
-<!--
+    <div class="ds-content-what1">
+        <div class="ds-content-what1-icon"></div>
+        <div class="ds-content-circle"></div>
+        <p class="ds-content-title">What We Are Doing</p>
+        <p class="ds-content-text-what-p1">Machine learning would benefit viral detection by designing assays that are
+            more sensitive than existing ones.That is surprising in light of machine learning and the explosion of viral
+            genomic data. Our project used a deep learning framework based on convolutional neural networks to
+            analytically compute the relationship between gRNA sequence, target sequence and gRNA activity. After
+            training, we developed a gRNA design tool applied to CRISPR virus detection to recommend gRNAs that can
+            efficiently detect the target virus. We finally put the recommended results into the database we
+            constructed.
+        </p>
+        <p class="ds-content-text-what-p2">We believe that in the near future, CRISPR-based virus detection method will
+            fill the gap of global healthcare system. We hope it will provide more opportunities for large-scale
+            population screening, wider dissemination of diagnostic technologies and field deployment of diagnostics to
+            control the spread of infectious diseases.
+        </p>
+        <p class="ds-content-text-what-br">A brief summary of the project process is as follows:</p>
+        <ol class="ds-content-text-what-br"><br>
+            <li>Collect the guide sequences, target sequences, sequences before and after the target sequence and the
+                corresponding fluorescence intensity enhancement rate for virus detection using cas13a protein.</li>
+            <li>Collect the guide sequences, target sequences, chromatin accessibility information and
+                insertion-deletion frequency of target sequences for cas12a protein and cas9 protein.</li>
+            <li>Use the above collected data to train to predict the activity of gRNA in a deep learning framework based
+                on convolutional neural networks.</li>
+            <li>Rank the efficiency of gRNA from highest to lowest</li>
+            <li>Design a gRNA design tool applied to Crispr virus detection to recommend gRNAs that can efficiently
+                detect the target virus.</li>
+            <li>Collect the gene sequences of different viruses and extract the target sequence and the corresponding
+                candidate gRNAs from the gene sequences of different viruses</li>
+            <li>Use our designed gRNA design tool to obtain gRNA that can detect the above virus efficiently</li>
+            <li>Construct a database of different viruses and their corresponding efficient gRNAs applied to Crispr
+                virus detection</li>
+        </ol>
+
+    </div>
+    <!--
 <div class="ds-content-what2">
     <div class="ds-content-what2-icon"></div>
     <div class="ds-content-circle"></div>
@@ -75,25 +114,36 @@
 <br>8. Use our designed gRNA design tool to obtain gRNA that can detect the above virus efficiently
 <br>9. Construct a database of different viruses and their corresponding efficient gRNAs applied to Crispr virus detection
     </p></div>-->
-<div class="ds-content-distinct1">
-    <div class="ds-content-distinct1-icon"></div>
-    <div class="ds-content-circle"></div>
-    <p class="ds-content-title">Brightened Dot And Difficulties We Overcome</p>
-    <p class="ds-content-text-distinct-p1">In the footsteps of our project, we have not moved forward with smooth sailing. Like solving a puzzle, we have tried to explore the binding mechanism of each CRISPR-cas system first before developing the optimal gRNA algorithm.
-        <br><br>
-        Then, downloading and organizing the mountains of data became one of our challenges. We have to find valuable information from this pile of data in order to uncover its treasures.
-        <br><br>
-        Of course, there were some unexpected decisions in the project. In the absence of direct virus detection data, we used editing efficiency as a substitute. This alter ensured the amount of our training data.
-        <br><br>
-        What was even more surprising was the incorporation of epigenetic factors. This seemingly uncommon combination had the unexpected effect of making our training even better.
-        <br><br>
-        Our accuracy was not satisfactory in the initial machine-learning model. After reviewing the literature and communicating with experts, we elevated it to new heights.
-        <br><br>
-        What makes our project unique compared to existing platforms is that we have extended our database to include a variety of Cas systems. Furthermore, we have transformed the classification into regression, which offers the users more options.
-        <br><br>
-        Finally, our platform not only seeks to aid with virus detection but also strives to be user-friendly. For example, we present target sequences and running efficiency in a visual way to researchers, making research more intuitive, understandable, and interesting.
-    </p></div>
-<!--<div class="ds-content-distinct2">
+    <div class="ds-content-distinct1">
+        <div class="ds-content-distinct1-icon"></div>
+        <div class="ds-content-circle"></div>
+        <p class="ds-content-title">Brightened Dot And Difficulties We Overcome</p>
+        <p class="ds-content-text-distinct-p1">In the footsteps of our project, we have not moved forward with smooth
+            sailing. Like solving a puzzle, we have tried to explore the binding mechanism of each CRISPR-cas system
+            first before developing the optimal gRNA algorithm.
+            <br><br>
+            Then, downloading and organizing the mountains of data became one of our challenges. We have to find
+            valuable information from this pile of data in order to uncover its treasures.
+            <br><br>
+            Of course, there were some unexpected decisions in the project. In the absence of direct virus detection
+            data, we used editing efficiency as a substitute. This alter ensured the amount of our training data.
+            <br><br>
+            What was even more surprising was the incorporation of epigenetic factors. This seemingly uncommon
+            combination had the unexpected effect of making our training even better.
+            <br><br>
+            Our accuracy was not satisfactory in the initial machine-learning model. After reviewing the literature and
+            communicating with experts, we elevated it to new heights.
+            <br><br>
+            What makes our project unique compared to existing platforms is that we have extended our database to
+            include a variety of Cas systems. Furthermore, we have transformed the classification into regression, which
+            offers the users more options.
+            <br><br>
+            Finally, our platform not only seeks to aid with virus detection but also strives to be user-friendly. For
+            example, we present target sequences and running efficiency in a visual way to researchers, making research
+            more intuitive, understandable, and interesting.
+        </p>
+    </div>
+    <!--<div class="ds-content-distinct2">
     <div class="ds-content-distinct2-icon"></div>
     <div class="ds-content-circle"></div>
     <p class="ds-content-title">Brightened Dot And Difficulties We Overcome</p>
@@ -101,10 +151,10 @@
 What makes our project unique compared to existing platforms is that we have extended our database to include a variety of Cas systems. Furthermore, we have transformed the classification into regression, which offers the users more options.
 Finally, our platform not only seeks to aid with virus detection but also strives to be user-friendly. For example, we present target sequences and running efficiency in a visual way to researchers, making research more intuitive, understandable, and interesting.
  </p></div>-->
-<div class="ds-bottom-letters"></div>
-<div class="ds-yellow-man"></div>
-<div class="ds-pink-man"></div>
-<div class="ds-green-man"></div>
+    <div class="ds-bottom-letters"></div>
+    <div class="ds-yellow-man"></div>
+    <div class="ds-pink-man"></div>
+    <div class="ds-green-man"></div>
 </div>
 <!--<div class="row mt-4">-->
 <!--  <div class="col">-->
