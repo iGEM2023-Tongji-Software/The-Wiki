@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ArticlePage from "@/components/articles/article-page.vue"
 import Paragraph from "@/components/articles/components/Paragraph.vue"
-import { onMounted } from "vue/dist/vue"
+import { onMounted } from "vue"
 
 onMounted(() => {
     document.title = "CASleuth | Construction"
