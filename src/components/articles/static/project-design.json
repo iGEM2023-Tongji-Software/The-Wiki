@@ -1,0 +1,445 @@
+{
+  "$schema": "https://igem.cinea.cc/schema/HTMLContentSchema.json",
+  "title": "DESIGN",
+  "content": [
+    {
+      "html": "",
+      "text": "Background",
+      "type": "h1",
+      "useHtml": false,
+      "subContent": [
+        {
+          "html": "Our program is inspired by the Crispr nucleic acid detection technology.",
+          "text": "",
+          "type": "p",
+          "useHtml": true
+        },{
+          "html": "Over the past three years, the COVID-19 pandemic has affected people's lives around the world. Infectious diseases are global health problems that affect billions of people. The development of rapid and sensitive diagnostic tools is key to the successful management of patients and the containment of disease transmission. Currently available diagnostics are very specific and sensitive, but are time-consuming and require expensive laboratory environments and trained personnel; therefore, they are not available in resource-limited areas, for mass screening purposes, and in outbreak and epidemic situations. <span class=\"a-red\">There is an urgent need to develop new, rapid and affordable tests for immediate diagnosis.</span>",
+          "text": "",
+          "type": "p",
+          "useHtml": true
+        },{
+          "html": "Important features of <span class=\"a-red\">CRISPR diagnostics are simplicity, component stability,</span> no need to isolate nucleic acids from biological samples, no need to meet isothermal conditions for each step, and minimal equipment.",
+          "text": "",
+          "type": "p",
+          "useHtml": true
+        },{
+          "html": "<span class=\"a-red\">CRISPR diagnostics may fill a gap in the global healthcare system,</span> providing opportunities for large-scale population screening, better control of infectious disease outbreaks, wider dissemination of diagnostic technologies and field deployment of diagnostics.",
+          "text": "",
+          "type": "p",
+          "useHtml": true
+        },{
+          "html": "Simply put, in the CRISPR/Cas system, Cas protein and gRNA form a complex, and then under the guidance of the gRNA, bind to the target nucleic acid of a specific sequence present in the environment, and then the Cas protein is stimulated by the \"incidental cleavage activity\", which will fragment the fluorescent labeled probe in the system and emit a fluorescent signal, thus characterizing the presence of the target nucleic acid and achieving the purpose of virus detection. <span class=\"a-red\">It can be found that the most important function in this system is the gRNA that binds specifically to the viral nucleic acid sequence,</span> and the binding efficiency of the gRNA to the specific nucleic acid sequence of the virus directly affects the sensitivity and accuracy of the detection system. We would like to investigate design methods for efficient gRNAs for Cas9, Cas12a and Cas13a.",
+          "text": "",
+          "type": "p",
+          "useHtml": true
+        }
+      ]
+    },
+    {
+      "html": "",
+      "text": "METHODS",
+      "type": "h1",
+      "useHtml": false,
+      "subContent": [
+        {
+          "html": "",
+          "text": "With a plenty of background investigations, we established the 'golden rule' of project analysis: Factors affecting gRNA binding efficiency include gRNA sequence characteristics, RNA secondary structure, and the apparent characteristics of the target sequence. We chose a deep learning-based approach to capture the relationship between these factors and gRNA binding efficiency. It can be divided into the following four aspects: data collection and preprocessing, convolutional neural network model training, feature interpretation, acquisition of candidate gRNAs and ranking of their binding efficiency. In addition, in order to provide reliable gRNAs for the crispr detection of existing viruses, we constructed a database called VIRUSCUFFS.",
+          "type": "p",
+          "useHtml": false
+        },
+        {
+          "html": "",
+          "text": "Data Collection and Preprocessing",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "",
+              "text": "We first obtained large-scale data sets of cas12a activity at 16,292 lentivirally integrated target sequences from the literature where authors use high-throughput method and guide sequences in HEK293T cells. The high-throughput experiments led to the generation of data sets HT 1, which consist of target sequence compositions and corresponding indel frequencies.",
+              "type": "p",
+              "useHtml": false
+            },{
+              "html": "",
+              "text": "In the same literature, we also obtained three independent data sets of cas12a activities at endogenous sites in two different cell lines, HEK293T and HCT116 (data sets HEK-lenti, HEK-plasmid, and HCT-plasmid).",
+              "type": "p",
+              "useHtml": false
+            },{
+              "html": "",
+              "text": "For data sets of cas13a activity, we collected a library of 19,209 unique LwaCas13a guide–target pairs from the literature. The library has a sequence composition representative of viral diversity, an average of 2.9 mismatches between each guide and target, and a variety of PFS alleles. The activity was defined as the logarithm of the fluorescence growth rate. The dataset consists of target sequences compositions, gRNA sequences compositions, sequences compositions of 20nt before and after target sequence and corresponding fluorescence growth rate.",
+              "type": "p",
+              "useHtml": false
+            },{
+              "html": "",
+              "text": "For data sets of cas9 activity, we gathered experimental data from four cell lines, namely hct116 (Hart T et al. 2015), hela (Hart T et al. 2015), hek293t (Doench JG et al. 2016), and hl60 (Wang T et al. 2014), where the CRISPR-Cas9 system was employed for gene knockout to enable functional gene screening. This dataset was curated, non-redundant data was extracted, and a normalization process was applied. This compilation yielded an on-target dataset encompassing 15,000 sgRNAs, targeting 1,071 distinct target sequences (Gilbert et al. 2014).We aim to assess the efficacy of CRISPR-Cas9-mediated knockout using sgRNAs as a measure of the binding efficiency between sgRNAs and target sequences.",
+              "type": "p",
+              "useHtml": false
+            },{
+              "html": "Given that our collected data originates from diverse experimental systems, their intrinsic evaluation criteria are not directly interchangeable. To render data from distinct experimental systems comparable, we performed a normalization procedure. We employed a collaborative filtering-based normalization approach. Specifically, we organized the experimental outcomes into a matrix where each row represents an experiment, and each column represents an sgRNA. The variable represents the knockout efficacy of the jth sgRNA in the ith experiment. First, we computed the row-wise averages（m<sub>row</sub>）, column-wise averages（m<sub>col</sub>）, and the overall matrix average （m<sub>matrix</sub>）. Then, we computed the sum of corresponding to row, column, and overall matrix averages, subtracted it from, resulting in the normalized. The formula is as follows:",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },
+            {
+              "html": "",
+              "text": "https://static.igem.wiki/teams/4787/wiki/img/article-res/project-design-1.png",
+              "type": "img",
+              "useHtml": false
+            },
+            {
+              "html": "",
+              "text": "Finally, we performed rank normalization on the normalized data. Specifically, the data was sorted in ascending order based on the normalized scores, and the ranks were calculated for each corresponding data value. Subsequently, these ranks were transformed into relative positional values within the range of 0 to 1. This transformation can be achieved using the following formula:",
+              "type": "p",
+              "useHtml": false
+            },
+            {
+              "html": "<img alt=\"\" src=\"https://static.igem.wiki/teams/4787/wiki/img/article-res/project-design-2.png\" style='width: 500px'/>",
+              "text": "",
+              "type": "img",
+              "useHtml": true
+            },
+            {
+              "html": "",
+              "text": "For the cas9 and cas12a proteins, it is important to include epigenetic information of the target sequences in the training data, given that epigenetic information greatly affects the efficiency of sgRNA binding to the target sequences, especially chromatin accessibility. We obtained DNase-seq narrow peak data from the Encyclopedia of DNA Elements (ENCODE). We aligned the positions of the target sequences in the experimental data to the narrow peaks on the chromosomes. When a nucleotide position in the target sequence overlapped the narrow peak range, we inferred that the position represented an open chromatin region.",
+              "type": "p",
+              "useHtml": false
+            }
+          ]
+        },
+        {
+          "html": "",
+          "text": "Convolutional Neural Network Model Training",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "We trained the proposed model in two main steps. (1) <span class=\"a-red\">Model selection</span> and <span class=\"a-red\">pre-training</span> of the entire architecture and (2) fine-tuning with endogenous target data <span class=\"a-red\">considering an additional chromatin accessibility input</span>, which led to the development of the model. For the three cas proteins, we constructed three different convolutional neural networks.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },{
+              "html": "In both steps, we optimized the loss function using the <span class=\"a-red\">Adam optimizer</span>. For the cas12a and cas13a datasets, we define the loss function as the mean square error, and for the cas9 dataset, we define the <span class=\"a-red\">loss function</span> as <span class=\"a-red\">SmoothL1Loss</span>.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },{
+              "html": "First we split the dataset by <span class=\"a-red\">dividing it into training set and test set</span>.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },{
+              "html": "Then, to <span class=\"a-red\">setup hyperparameters</span>, for the cas12a and cas13a datasets, we used a <span class=\"a-red\">five-fold cross-validation method</span>. For cas13a datasets, we hope to select the number of parallel convolutional filters and their widths (chosenuniformly among not having a convolutional layer, 1 filter of width 1, 1 filter of width 2, 1 filter of width 3, 1 filter of width 4, 2 filters of widths {1, 2}, 3 filters of widths {1, 2, 3} and 4 filters of widths {1, 2, 3, 4}), convolutional dimension (uniform in [10, 249]), pooling layer width (uniform in [1, 3]), pooling layer computation (chosen uniformly among maximum, average and both), number of parallel locally connected layers and their widths (chosen uniformly among not having a locally connected layer, 1 filter of width 1, 1 filter of width 2 and 2 filters of widths {1, 2}), locally connected filter dimension (uniform in [1, 4]), number of fully connected layers and their dimensions (chosen uniformly among 1 layer with dimension uniform in [25, 74] and 2 layers each with dimension uniform in [25, 74]), whether to perform batch normalization in between the convolutional and pooling layers (uniform among yes and no), activation function (chosen uniformly among ReLU and ELU), dropout rate in front of the fully connected layers (uniform in [0, 0.5]), L2 regularization coefficient (lognormal with mean µ = −13, σ = 4), batch size (uniform in [32, 255]), learning rate (logarithmic in [10−6 , 10−1]). For cas12adatasets, we hope to select Number of filters [20,40,80], Filter length [5,7,9], 1st layer units [20,40,80], 2nd layer units [20,40,80], 3rd layer units [20,40,80]. For the cas9 dataset, we initially used the optuna package for parameter tuning in the hope of selecting the optimal optimizer (\"Adam\", \"RMSprop\", \"SGD\"), learning rate (range [1e-5,1e-1]), and batchsize (range [64,256]), but our subsequent studies found that the tuning of these parameters had a minimal impact on the model's accuracy has a negligible effect.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },{
+              "html": "After the training loop concludes, the model's <span class=\"a-red\">Spearman correlation coefficient is calculated to assess its performance</span>.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },{
+              "html": "For cas9 and cas12a, to <span class=\"a-red\">take chromatin accessibility as well as the learned sequence represen-tations into account</span>, we adopted an additional chromatin accessibility integration layer right before the regression output layer.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            }
+          ]
+        },
+        {
+          "html": "",
+          "text": "Feature Interpretation",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "To understand which features in the dataset are important for Cas protein activity, we used <span class=\"a-red\">Salience Maps to visualize model features</span>. The basic principle of this approach is to compute the loss of mean square error between the model predictions and the target output, obtain the gradient between the predictions and the input sequence, and consider that the larger the absolute value of the gradient, the more important the feature is.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            }
+          ]
+        },
+        {
+          "html": "",
+          "text": "Acquisition of Candidate gRNAs and Ranking of their Binding Efficiency",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "Upon completing the model training, we <span class=\"a-red\">established a streamlined</span> script to automate the process. This script is designed to accept a FASTA-format file as input. It systematically identifies potential protospacer adjacent motif (PAM) sites suitable for the CRISPR-Cas9 system and CRISPR-Cas12a system within the provided sequences. The identified 23-nt DNA sequences and 34-nt DNA sequences containing PAM sites are treated as target sequences of CRISPR-Cas9 system and CRISPR-Cas12a system respectively. For CRISPR-Cas13a system, it automatically recognizes 28-nt DNA sequences as target sequences through a sliding window. Following the principles of base complementarity, corresponding single-guide RNA (sgRNA) sequences are generated.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },
+            {
+              "html": "Subsequently, these sgRNA sequences are fed into our pre-trained convolutional neural network (CNN) model. The script then automates the collection of regression scores provided by the CNN for each input sequence. The collected scores are organized in descending order, <span class=\"a-red\">resulting in an output file</span> containing three columns: <span class=\"a-red\">sequence, index, and score.</span> The data in this file is tab-separated. Additionally, the <span class=\"a-red\">script displays the top 10 results on the screen</span>.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },
+            {
+              "html": "",
+              "text": "https://static.igem.wiki/teams/4787/wiki/img/article-res/project-design-3.png",
+              "type": "img",
+              "useHtml": false
+            }
+          ]
+        },
+        {
+          "html": "",
+          "text": "VIRUSCUFFS Construction",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "At this stage, we have developed a convolutional neural network (CNN)-based tool capable of predicting the efficiency of sgRNA and target sequence binding. To facilitate user access and prevent redundant computations, we gathered genomic sequences from <span class=\"a-red\">3317 DNA viruses</span> and <span class=\"a-red\">9115 Refseq Nucleotides</span> from the NCBI database. We then employed our tool to predict the efficiency of sgRNA targeting these viruses. The prediction outcomes were visually processed and organized, culminating in the <span class=\"a-red\">construction of a user-friendly database</span>. This database serves as a resource for efficiently retrieving sgRNAs targeting common DNA viruses.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "html": "",
+      "text": "RESULT",
+      "type": "h1",
+      "useHtml": false,
+      "subContent": [
+        {
+          "html": "",
+          "text": "1.CNN-Based sgRNA Binding Efficiency Prediction Model Achieves High Accuracy",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "As for model of Cas9,following 800 EPOCHs,we successfully generated a CNN model with a Spearman correlation coefficient of 0.88.The training loss was 0.008865698240697384, and the test loss was 0.014979960230234.Furthermore,our model demonstrated excellent generalization performance on various validation sets.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },
+            {
+              "html": "For <span class=\"a-red\">model of Cas12a</span>,using the optimal hyperparameter configuration (number of filters:80; Filter length:7; 1st layer units:80; 2nd layer units:40; 3rd layer units:40) and evaluated using dataset HT1-2,to which we have added binary chromatin accessibility information.The model reaching <span class=\"a-red\">Spearman correlations of 0.82 and 0.87</span> in HEK-plasmid and HCT-plasmid test data set.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },
+            {
+              "html": "For <span class=\"a-red\">model of Cas13</span>,applying the optimal parameters and hyperparameters from training to the training set,the <span class=\"a-red\">Spearman result is 0.73</span>.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            }
+          ]
+        },
+        {
+          "html": "",
+          "text": "2.CNN-Based sgRNA Binding Efficiency Prediction Model Reveals Sequence Features Affecting Efficiency",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "The pattern of sgRNA sequence features and binding efficiency are revealed by our models. <span class=\"a-red\">The overview is in the following table.</span>",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },
+            {
+              "html": "<tr><th colspan=\"2\" style=\"text-align: center;\">Pattern of sequence features and binding efficiency</th></tr>\n<tr style=\"text-align: center;\"><th>Categories of Cas</th><th>Efficient features</th></tr>\n<tr><th>Cas9</th><th>Preference for A at 9-16nt<br/>Preference for G at 20nt<br/>Preference for C at the Third Position of the PAM (CGG)<br/>High CG Content from Positions 15 to 20</th></tr>\n<tr><th>Cas12a</th><th>Downstream position of PAM is quite important<br/>Low indel frequencies TTTT as the PAM</th></tr>\n<tr><th>Cas13</th><th>Positions around the PFS site are relatively crucial</th></tr>",
+              "text": "",
+              "type": "table",
+              "useHtml": true
+            },
+            {
+              "html": "For <span class=\"a-red\">pattern of Cas9</span>. We extracted feature information from the trained model and visualized it using a heatmap. This heatmap unveiled essential characteristics influencing sgRNA binding efficiency. These findings align with Vasileios Konstantakos et al.'s report from 2022.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },
+            {
+              "html": "",
+              "text": "I. Efficient sgRNAs Exhibit a Preference for A at Specific Positions",
+              "type": "h3",
+              "useHtml": false,
+              "subContent": [
+                {
+                  "html": "",
+                  "text": "Adenine (A) content plays a pivotal role in contributing to the nucleotide composition, with efficient sgRNAs having a higher A content. This is particularly notable in the central third of the gRNA, specifically around positions 9-16. The elevated A content in this region corresponds to a stronger affinity of the gRNA to Cas9.",
+                  "type": "p",
+                  "useHtml": false
+                }
+              ]
+            },
+            {
+              "html": "",
+              "text": "II. Efficient sgRNAs Display a Preference for G at Position 20:",
+              "type": "h3",
+              "useHtml": false,
+              "subContent": [
+                {
+                  "html": "",
+                  "text": "Nucleotides near the protospacer adjacent motif (PAM) site are often critical, consistent with the experimental evidence indicating their importance for binding the target sequence and Cas9. This enriched region, known as the seed region (positions 16-20 of the gRNA), seems most influential at position 20, where G is strongly favored, while C is notably disfavored.",
+                  "type": "p",
+                  "useHtml": false
+                }
+              ]
+            },
+            {
+              "html": "",
+              "text": "III. Efficient sgRNAs Exhibit a Preference for C at the Third Position of the PAM (CGG), and High CG Content from Positions 15 to 20",
+              "type": "h3",
+              "useHtml": false,
+              "subContent": [
+                {
+                  "html": "",
+                  "text": "The sequences around the PAM site are vital for the binding efficiency of sgRNA and target sequence. The preference for C at the third position of the PAM and the preference for CG near the PAM site enable stronger hydrogen bonding between sgRNA and target sequence, thereby facilitating their binding.",
+                  "type": "p",
+                  "useHtml": false
+                },
+                {
+                  "html": "",
+                  "text": "These findings collectively affirm the model's efficacy in predicting sgRNA binding efficiency and uncover biologically meaningful sequence features that influence the efficacy of sgRNA and target sequence interaction.",
+                  "type": "p",
+                  "useHtml": false
+                },
+                {
+                  "html": "<div style=\"display:flex;width: 100%;padding-top: 20px;padding-bottom: 20px;\">\n<div style=\"flex-grow: 1;\"></div>\n<img src=\"https://static.igem.wiki/teams/4787/wiki/img/article-res/project-design-4.png\" alt=\"\" style=\"height: 450px\"/>\n<img src=\"https://static.igem.wiki/teams/4787/wiki/img/article-res/project-design-5.png\" alt=\"\" style=\"height: 450px; margin-left:20px\"/>\n<div style=\"flex-grow: 1;\"></div>\n</div>",
+                  "text": "",
+                  "type": "div",
+                  "useHtml": true
+                },
+                {
+                  "html": "For <span class=\"a-red\">pattern of Cas12a</span>, we use Salience Maps to visualize model features. Figure shows the one-hot encode and heatmap of one sequence suggesting the <span class=\"a-red\">downstream position of PAM is quite important and indel frequencies were very low when we used TTTT as the PAM.</span>",
+                  "text": "",
+                  "type": "p",
+                  "useHtml": true
+                },
+                {
+                  "html": "",
+                  "text": "https://static.igem.wiki/teams/4787/wiki/img/article-res/project-design-6.png",
+                  "type": "img",
+                  "useHtml": false
+                },
+                {
+                  "html": "For <span class=\"a-red\">pattern of Cas13</span>, We used Salience Maps to visualize them. Even though Cas13 doesn't inherently possess a PAM sequence, it's evident that <span class=\"a-red\">positions around the PFS site are relatively crucial</span>.",
+                  "text": "",
+                  "type": "p",
+                  "useHtml": true
+                },
+                {
+                  "html": "<img src=\"https://static.igem.wiki/teams/4787/wiki/img/article-res/project-design-7.png\" style=\"width: 450px; background: #fff\"/>",
+                  "text": "",
+                  "type": "img",
+                  "useHtml": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "html": "",
+          "text": "3.Database",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "<span class=\"a-red\">We gathered genomic sequences from 3317 DNA viruses and 9115 Refseq Nucleotides from the NCBI database. We then employed our tool to predict the efficiency of sgRNA targeting these viruses. The prediction outcomes were visually processed and organized, culminating in the construction of a user-friendly database.</span>",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },
+            {
+              "html": "<span class=\"a-red\">For Cas9</span>, The established database encompasses predictive outcomes for efficient sgRNAs targeting <span class=\"a-red\">3317 DNA viruses</span>. Furthermore, a comprehensive retrieval mechanism has been implemented, offering a user-friendly visualization interface. (To be completed)",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },
+            {
+              "html": "<span class=\"a-red\">For Cas12a</span>, we downloaded the fasta sequence files of <span class=\"a-red\">929 retroviruses</span> from the NCBI website (<a href=\"https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/\">https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/</a>) and used them as script input to obtain the recommended gRNAs for each virus. The results (recommended gRNA, position index, score) were written to a csv file for database construction.",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            },
+            {
+              "html": "For Cas13. (To be completed)",
+              "text": "",
+              "type": "p",
+              "useHtml": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "html": "",
+      "text": "Discussion",
+      "type": "h1",
+      "useHtml": false,
+      "subContent": [
+        {
+          "html": "After completing our project, we also <span class=\"a-red\">made reflections</span> on our <span class=\"a-red\">analytical approach</span> during the study and <span class=\"a-red\">proposed further improvements</span> that can be applied to update the database and also <span class=\"a-red\">enhance the reliability of the software's prediction function</span>.",
+          "text": "",
+          "type": "p",
+          "useHtml": true
+        },
+        {
+          "html": "",
+          "text": "1.Potential Application of Complex and Modern Deep Learning Architectures for sgRNA Binding Efficiency Prediction",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "",
+              "text": "While our current study presents a relatively simple CNN-based deep neural network model, the realm of deep learning offers an array of intricate and contemporary architectures awaiting exploration for enhancing the prediction of sgRNA binding efficiency. Architectures such as recurrent neural networks (RNNs), long short-term memory networks (LSTMs), transformer-based models, and attention mechanisms have exhibited exceptional performance across diverse domains. Incorporating these architectures into our framework has the potential to capture intricate sequence patterns and dependencies, ultimately leading to improved predictive capabilities.",
+              "type": "p",
+              "useHtml": false
+            }
+          ]
+        },
+        {
+          "html": "",
+          "text": "2.Enhanced Accuracy through Integration of More Epigenetic Data",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "",
+              "text": "According to the report by Vasileios Konstantakos et al. (2022), epigenetic features like CTCF, H3K4me3, DNase, and RRBS influence the binding efficiency of sgRNA and target sequences, particularly concerning chromatin accessibility. In our research, we have already accounted for the influence of chromatin accessibility and observed a significant enhancement in model accuracy with its inclusion. Thus, it stands to reason that epigenetic data is a crucial factor in explaining sgRNA binding efficiency. Providing additional epigenetic data holds the potential to further elevate the precision of our model.",
+              "type": "p",
+              "useHtml": false
+            }
+          ]
+        },
+        {
+          "html": "",
+          "text": "3.Potential Mitigation of Limited Experimental Data and Enhanced Generalization through Self-Distillation",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "",
+              "text": "The amount of experimental data reflecting sgRNA binding efficiency collected from published papers and public datasets is relatively scarce. For the three models we have trained, the scale of the training set is roughly in the range of tens of thousands of records. This remains insufficient for a deep learning model. Therefore, in future training efforts, employing self-distillation could be advantageous. This involves training an initial teacher model with a certain level of accuracy, followed by training a precision prediction model that forecasts the teacher model's accuracy. Subsequently, the precision prediction model is used to select superior data generated by the teacher model, which is then used to train a student model with the same architecture as the teacher model. Through self-distillation, the student model benefits not only from training with true labels but also from additional insights derived from the teacher model's predictions. This aids in enhancing the student model's generalization on unlabeled data and, in some cases, could surpass the performance of the teacher model. Moreover, self-distillation contributes to model compression, given that student models generally possess fewer parameters than teacher models.",
+              "type": "p",
+              "useHtml": false
+            }
+          ]
+        },
+        {
+          "html": "",
+          "text": "4.Further Interpretation of Patterns Revealed by the Model Influencing sgRNA Binding Efficiency",
+          "type": "h2",
+          "useHtml": false,
+          "subContent": [
+            {
+              "html": "",
+              "text": "Through deep learning, we have identified a range of patterns that impact sgRNA binding efficiency. However, the practical significance of these patterns necessitates further experimental validation. Additionally, a deeper interpretation of these patterns is essential, addressing their chemical and physical underpinnings to ascertain their precise influence on sgRNA binding efficiency.",
+              "type": "p",
+              "useHtml": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
