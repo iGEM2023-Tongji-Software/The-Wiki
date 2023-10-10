@@ -52,7 +52,7 @@ const ready = ref(false)
 const loadSVGA = () => {
     let player = new SVGA.Player("#side-footprint-animation")
     let parser = new SVGA.Parser()
-    parser.load("/img/footprint.svga", function (videoItem) {
+    parser.load("/footprint.svga", function (videoItem) {
         player.setVideoItem(videoItem)
         player.startAnimation()
     })

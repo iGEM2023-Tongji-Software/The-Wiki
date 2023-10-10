@@ -4,7 +4,7 @@
 
 body {
     overflow-x: hidden;
-    cursor: url("/img/cursor.cur"),default;
+    cursor: url("/cursor.cur"),default;
 }
 
 ::-webkit-scrollbar {
