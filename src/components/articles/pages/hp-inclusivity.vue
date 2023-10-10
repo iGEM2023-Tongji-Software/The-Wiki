@@ -81,9 +81,9 @@ onMounted(() => {
 
             <next-prev-page
                 prev-title="COMMUNICATION"
-                prev-link="/human-practices/communication"
+                prev-link="/tongji-software/human-practices/communication"
                 next-title="SUSTAINABLE"
-                next-link="/human-practices/sustainable"
+                next-link="/tongji-software/human-practices/sustainable"
             />
         </template>
     </article-page>

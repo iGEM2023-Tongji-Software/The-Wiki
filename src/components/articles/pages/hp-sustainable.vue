@@ -76,7 +76,7 @@ onMounted(() => {
                 </ol>
             </paragraph>
 
-            <next-prev-page prev-title="INCLUSIVITY" prev-link="/human-practices/inclusivity" />
+            <next-prev-page prev-title="INCLUSIVITY" prev-link="/tongji-software/human-practices/inclusivity" />
         </template>
     </article-page>
 </template>

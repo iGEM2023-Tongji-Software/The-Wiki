@@ -304,7 +304,7 @@ onMounted(() => {
                 </div>
             </div>
 
-            <next-prev-page next-title="INTEGRATED HP" next-link="/human-practices/integrated-hp" />
+            <next-prev-page next-title="INTEGRATED HP" next-link="/tongji-software/human-practices/integrated-hp" />
         </template>
     </article-page>
 </template>

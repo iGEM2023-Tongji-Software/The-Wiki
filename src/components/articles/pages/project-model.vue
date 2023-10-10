@@ -420,9 +420,9 @@ onMounted(() => {
             </paragraph>
 
             <next-prev-page
-                next-link="/engineering"
+                next-link="/tongji-software/engineering"
                 next-title="PROJECT ENGINEERING"
-                prev-link="/project/implementation"
+                prev-link="/tongji-software/project/implementation"
                 prev-title="PROJECT IMPLEMENTATION"
             />
         </template>

@@ -103,7 +103,7 @@ onMounted(() => {
                 </p>
             </paragraph>
 
-            <next-prev-page next-link="/project/model" next-title="PROJECT MODEL" prev-link="/project/design" prev-title="PROJECT DESIGN" />
+            <next-prev-page next-link="/tongji-software/project/model" next-title="PROJECT MODEL" prev-link="/tongji-software/project/design" prev-title="PROJECT DESIGN" />
         </template>
     </article-page>
 </template>
