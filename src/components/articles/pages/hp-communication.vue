@@ -33,7 +33,7 @@ onMounted(() => {
                     researchers in these companies. They have provided us with advice on the project and have also given us a better understanding of
                     the related industries.
                 </p>
-                <p>Please click <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
             </paragraph>
 
             <header1 text="HOSPITAL" />
@@ -44,7 +44,7 @@ onMounted(() => {
                     communicate with them and learn more about the relevant background. The communication with them has given us a better
                     understanding of the potential end-users of our project and has further helped us update our project.
                 </p>
-                <p>Please click <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
             </paragraph>
 
             <header1 text="EXPERTS" />
@@ -54,7 +54,7 @@ onMounted(() => {
                     We have consulted many experts in the industry, including professors in our university. They have taken a serious interest in our
                     project, provided us with insights into the future direction of the project, and offered methods to optimize our software.
                 </p>
-                <p>Please click <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
             </paragraph>
 
             <header1 text="COMMUNITIES" />
@@ -63,7 +63,7 @@ onMounted(() => {
                     There are people from various professions and age groups in the community. We communicate with the local community to gain a
                     better understanding of their awareness of virus detection and to disseminate relevant knowledge to them.
                 </p>
-                <p>Please click <a href="/education">Education</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/education">Education</a> for more information.</p>
             </paragraph>
 
             <header1 text="SCHOOLS" />
@@ -72,7 +72,7 @@ onMounted(() => {
                     There are people from various professions and age groups in the community. We communicate with the local community to gain a
                     better understanding of their awareness of virus detection and to disseminate relevant knowledge to them.
                 </p>
-                <p>Please click <a href="/education">Education</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/education">Education</a> for more information.</p>
             </paragraph>
 
             <Image bare class="mt-5">

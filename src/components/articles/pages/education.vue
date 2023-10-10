@@ -493,9 +493,9 @@ onMounted(() => {
                 <div class="modal-body">
                     <div class="flex mt-4">
                         <div class="grow" />
-                        <object type="application/pdf" data="/picture-book.pdf" width="1024" height="700">
+                        <object type="application/pdf" data="https://static.igem.wiki/teams/4787/wiki/picture-book.pdf" width="1024" height="700">
                             Looks like your browser doesn't support PDF Preview.
-                            <a href="/picture-book.pdf" target="_blank">Click here</a>
+                            <a href="https://static.igem.wiki/teams/4787/wiki/picture-book.pdf" target="_blank">Click here</a>
                             to get a copy of the PDF.
                         </object>
                         <div class="grow" />

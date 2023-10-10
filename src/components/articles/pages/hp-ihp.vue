@@ -878,8 +878,8 @@ onMounted(() => {
                 <div class="modal-body">
                     <div class="flex">
                         <div class="grow" />
-                        <object type="application/pdf" data="/ccic.pdf" width="1024" height="700">
-                            Looks like your browser doesn't support PDF Preview. <a href="/ccic.pdf" target="_blank">Click here</a> to get a copy of
+                        <object type="application/pdf" data="https://static.igem.wiki/teams/4787/wiki/ccic.pdf" width="1024" height="700">
+                            Looks like your browser doesn't support PDF Preview. <a href="https://static.igem.wiki/teams/4787/wiki/ccic.pdf" target="_blank">Click here</a> to get a copy of
                             the PDF.
                         </object>
                         <div class="grow" />

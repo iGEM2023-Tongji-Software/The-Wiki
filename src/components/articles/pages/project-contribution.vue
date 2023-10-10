@@ -71,7 +71,7 @@ onMounted(() => {
                     We have done a lot of work to enhance the impact of synthetic biology. We have set up many media platforms where we have uploaded
                     many articles and videos about CRISPR-Cas system and virus detection. At the same time, we have developed a game called "CASleuth
                     Virus Detection" based on project principles. This game has well promoted synthetic biology and iGEM, and deepened people's
-                    further understanding of CRISPR as well. We also conducted many offline activities. Click <a href="/education">Education</a> for
+                    further understanding of CRISPR as well. We also conducted many offline activities. Click <a href="/tongji-software/education">Education</a> for
                     more details.
                 </p>
             </paragraph>
@@ -89,7 +89,7 @@ onMounted(() => {
                     China. We also held a seminar with some iGEM teams from China to explore the future of artificial intelligence and synthetic
                     biology. We did these in order to promote the iGEM competition and bring our youth closer to the iGEM stage. Moreover, we
                     sincerely willing to provide information to future iGEMers to solve their difficulties in using our projects. Click
-                    <a href="/human-practice/integrated-hp">integrated HP</a>
+                    <a href="/tongji-software/human-practice/integrated-hp">integrated HP</a>
                     for more details.
                 </p>
             </paragraph>

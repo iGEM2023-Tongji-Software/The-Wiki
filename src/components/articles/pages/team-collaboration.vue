@@ -33,7 +33,7 @@ onMounted(() => {
                     have achieved extensive cooperation in project management, schedule planning, and Jamboree coordination, providing mutual
                     assistance.
                 </p>
-                <p>Please click <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
                 <Image class="">
                     <img src="https://static.igem.wiki/teams/4787/wiki/img/article-res/team-collaboration-1.png" alt="" class="w-[400px]" />
                 </Image>
@@ -50,7 +50,7 @@ onMounted(() => {
                     CRISPR technology to a wider audience and fostering a passion for the field of synthetic biology.
                 </p>
                 <p>
-                    Please click <a href="/human-practices/integrated-hp">Integrated HP</a> and <a href="/education">Education</a> for more
+                    Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> and <a href="/tongji-software/education">Education</a> for more
                     information.
                 </p>
                 <Image>
@@ -69,7 +69,7 @@ onMounted(() => {
                     Like with WHU-China, we shared our projects and design ideas during meetings, asked each other questions, and deepened our
                     understanding of CRISPR technology. We also collaborated on creating a CRISPR technology brochure.
                 </p>
-                <p>Please click <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
             </paragraph>
 
             <header1 text="SJTU-SoFtwARE" />
@@ -86,7 +86,7 @@ onMounted(() => {
                 </p>
                 <p>
                     In fact, our collaboration transcends the mere definition of cooperation, encompassing a deep level of mutual support and shared
-                    goals. Please click <a href="/team/partnership">Partnership</a> for more information.
+                    goals. Please click <a href="/tongji-software/team/partnership">Partnership</a> for more information.
                 </p>
             </paragraph>
 
@@ -102,7 +102,7 @@ onMounted(() => {
                     suggestions regarding Jamboree journey-related matters, making our planning process smoother. In addition to that, they approached
                     us for a joint effort in creating a picture book.
                 </p>
-                <p>Please click <a href="/education">Education</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/education">Education</a> for more information.</p>
             </paragraph>
 
             <header1 text="USTC-SOFTWARE" />
@@ -159,7 +159,7 @@ onMounted(() => {
                     from various species. We think their project is very useful to humans so we keep communicating with them since we met at CCiC
                     meeting. We regularly update the progress of our two teams, and we also invited them to try out our mini-game.
                 </p>
-                <p>Please click <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
             </paragraph>
 
             <header1 text="NJU-CHINA" />
@@ -175,7 +175,7 @@ onMounted(() => {
                     meeting.
                 </p>
                 <p>
-                    Please click <a href="/human-practices/integrated-hp">Integrated HP</a> and <a href="/team/partnership">Partnership</a> for more
+                    Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> and <a href="/tongji-software/team/partnership">Partnership</a> for more
                     information.
                 </p>
             </paragraph>
@@ -191,7 +191,7 @@ onMounted(() => {
                 <p>
                     Even more encouragingly, we communicated with other iGEM teams like WHU-China. During this exchange, we learned about each other's
                     projects and prepared for the upcoming CRISPR conference.Please click
-                    <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.
+                    <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.
                 </p>
             </paragraph>
 
@@ -206,7 +206,7 @@ onMounted(() => {
                 </p>
                 <p>
                     During these discussions, the idea of collaboratively creating a brochure centered around the CRISPR-Cas system came up, and we
-                    delved into various relevant details.Please click <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.
+                    delved into various relevant details.Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.
                 </p>
             </paragraph>
 
@@ -221,7 +221,7 @@ onMounted(() => {
                 <p>
                     Furthermore, we collectively explored the potential avenues for integrating AI and synthetic biology, while contemplating the
                     promising prospects that lie ahead in their synergistic advancement.Please click
-                    <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.
+                    <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.
                 </p>
             </paragraph>
 

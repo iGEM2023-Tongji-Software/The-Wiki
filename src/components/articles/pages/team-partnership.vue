@@ -52,7 +52,7 @@ onMounted(() => {
                     field of bioinformatics, we were able to understand each other's projects well and offer valuable suggestions to one another. They
                     expressed appreciation and recognition for the progress and success of our project.
                 </p>
-                <p>Please click <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
             </paragraph>
 
             <header2 text="Human Practices& Education" />
@@ -65,7 +65,7 @@ onMounted(() => {
                 </p>
                 <p>
                     In fact, our collaboration transcends the mere definition of cooperation, encompassing a deep level of mutual support and shared
-                    goals. Please click <a href="/team/partnership">Partnership</a> for more information.
+                    goals. Please click <a href="/tongji-software/team/partnership">Partnership</a> for more information.
                 </p>
             </paragraph>
 
@@ -101,7 +101,7 @@ onMounted(() => {
                     AI & software WeChat group to facilitate further communication among relevant teams. Their team also took part in our organized
                     CRISPR&Synbio online meeting, where we had many productive exchanges.
                 </p>
-                <p>Please click <a href="/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more information.</p>
             </paragraph>
 
             <header2 text="Education" />
@@ -111,7 +111,7 @@ onMounted(() => {
                     supportive of our idea. In the end, we collaborated on writing a brochure related to CRISPR. Their team was responsible for the
                     CRISPR-Cas9 section, while our team focused on the application of CRISPR in synthetic biology.
                 </p>
-                <p>Please click <a href="/education">Education</a> for more information.</p>
+                <p>Please click <a href="/tongji-software/education">Education</a> for more information.</p>
             </paragraph>
 
             <header1 text="NJU-CHINA" />

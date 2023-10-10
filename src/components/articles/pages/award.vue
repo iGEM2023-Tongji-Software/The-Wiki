@@ -35,13 +35,13 @@ onMounted(() => {
             <header2 text="Project Attributions" />
             <paragraph style="padding-top: 50px">
                 <p>Thanks all people for their effort and support to this project!</p>
-                <p>Please click <a href="/team/attributions">Attributions</a> for more details.</p>
+                <p>Please click <a href="/tongji-software/team/attributions">Attributions</a> for more details.</p>
             </paragraph>
 
             <header2 text="Project Description" />
             <paragraph style="padding-top: 50px">
                 <p>We introduced the background, inspiration, goals and so on.</p>
-                <p>Please click <a href="/description">Description</a> for more details.</p>
+                <p>Please click <a href="/tongji-software/description">Description</a> for more details.</p>
             </paragraph>
 
             <header2 text="Contribution" />
@@ -50,7 +50,7 @@ onMounted(() => {
                     We settled a user-friendly website for researchers to analyze data and predict the activity of gRNA. In addition, we established a
                     useful database for researchers who are interested in Crispr Virus detection.
                 </p>
-                <p>Please click <a href="/contribution">Contribution</a> for more details.</p>
+                <p>Please click <a href="/tongji-software/contribution">Contribution</a> for more details.</p>
             </paragraph>
 
             <header1 text="SILVER" />
@@ -61,7 +61,7 @@ onMounted(() => {
                     We settled a user-friendly website for researchers to analyze data and predict the activity of gRNA. In addition, we established a
                     useful database for researchers who are interested in Crispr Virus detection.
                 </p>
-                <p>Please click <a href="/engineering">Engineering</a> for more details.</p>
+                <p>Please click <a href="/tongji-software/engineering">Engineering</a> for more details.</p>
             </paragraph>
 
             <header2 text="Human Practices" />
@@ -70,7 +70,7 @@ onMounted(() => {
                     During our project, we organized and participated in various activities with the goal to spread the word of Synthetic Biology,
                     iGEM, and our project to society.
                 </p>
-                <p>Please click <a href="/human-practices">Human Practices</a> for more details.</p>
+                <p>Please click <a href="/tongji-software/human-practices">Human Practices</a> for more details.</p>
             </paragraph>
 
             <header1 text="GOLD" />
@@ -82,7 +82,7 @@ onMounted(() => {
                     cas proteins. In the model, we fully considered biological significance such as epigenetic information and differences in CRISPR
                     systems, and improved the model architecture.
                 </p>
-                <p>Please click <a href="/project/model">Model</a> for more details.</p>
+                <p>Please click <a href="/tongji-software/project/model">Model</a> for more details.</p>
             </paragraph>
 
             <header2 text="Integrated Human Practices" />
@@ -91,7 +91,7 @@ onMounted(() => {
                     We brainstormed and identified stakeholders related to our project and communicated with them. We optimized our design, model and
                     analyzing pipeline to improve our project according to plenty of suggestions we received from them.
                 </p>
-                <p>Please click <a href="/human-practices/integrated-hp">Integrated HP</a> for more details.</p>
+                <p>Please click <a href="/tongji-software/human-practices/integrated-hp">Integrated HP</a> for more details.</p>
             </paragraph>
 
             <header2 text="Education" />
@@ -101,7 +101,7 @@ onMounted(() => {
                     of life including people with specific impairment. Thousands of people have been included and we have received plenty of good
                     feedback from them.
                 </p>
-                <p>Please click <a href="/education">Education</a> for more details.</p>
+                <p>Please click <a href="/tongji-software/education">Education</a> for more details.</p>
             </paragraph>
         </template>
     </article-page>
