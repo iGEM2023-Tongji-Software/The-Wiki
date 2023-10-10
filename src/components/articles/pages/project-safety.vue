@@ -3,7 +3,7 @@ import ArticlePage from "@/components/articles/article-page.vue"
 import Header1 from "@/components/articles/components/Header1.vue"
 import Paragraph from "@/components/articles/components/Paragraph.vue"
 import NextPrevPage from "@/components/articles/components/NextPrevPage.vue"
-import { onMounted } from "vue/dist/vue"
+import { onMounted } from "vue"
 
 const h1_image = 7
 
