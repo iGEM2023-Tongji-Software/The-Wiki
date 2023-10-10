@@ -46,7 +46,7 @@ onMounted(() => {
         </div>
         <h1 :id="text" :class="textCss">{{ text }}</h1>
         <div class="decoration-img">
-            <img :src="`/img/icons-${image}.png`" alt="" style="width: 80px; height: 80px" />
+            <img :src="`https://static.igem.wiki/teams/4787/wiki/img/icons-${image}.png`" alt="" style="width: 80px; height: 80px" />
         </div>
     </div>
 </template>
