@@ -157,26 +157,26 @@ onMounted(() => {
     <div id="home-container">
         <div id="ic-1-bg">
             <div id="bg-6" class="bg">
-                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-3small.png" alt="background-4" id="bg-4-img" class="bg-img" />
+                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-3-small.png" alt="background-4" id="bg-4-img" class="bg-img" />
             </div>
             <div id="bg-1" class="bg">
-                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-1small.png" alt="background-1" id="bg-1-img" class="bg-img" />
+                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-1-small.png" alt="background-1" id="bg-1-img" class="bg-img" />
             </div>
             <div id="bg-2" class="bg">
-                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-3small.png" alt="background-2" id="bg-2-img" class="bg-img" />
+                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-3-small.png" alt="background-2" id="bg-2-img" class="bg-img" />
             </div>
             <div id="bg-3" class="bg">
-                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-3small.png" alt="background-3" id="bg-3-img" class="bg-img" />
+                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-3-small.png" alt="background-3" id="bg-3-img" class="bg-img" />
             </div>
             <div id="bg-4" class="bg">
-                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-4small.png" alt="background-4" id="bg-4-img" class="bg-img" />
+                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-4-small.png" alt="background-4" id="bg-4-img" class="bg-img" />
             </div>
             <div id="bg-5" class="bg-sp">
-                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-newspaper.png" alt="background-special" id="bg-sp-img" class="bg-img" />
+                <img src="https://static.igem.wiki/teams/4787/wiki/img/home-newspaper-small.png" alt="background-special" id="bg-sp-img" class="bg-img" />
             </div>
         </div>
         <div id="fg">
-            <img src="https://static.igem.wiki/teams/4787/wiki/img/home-newspaper.png" alt="header" id="fg-img" />
+            <img src="https://static.igem.wiki/teams/4787/wiki/img/home-newspaper-small.png" alt="header" id="fg-img" />
         </div>
     </div>
 </template>

@@ -85,10 +85,10 @@ onMounted(() => {
         <LoadingScreen v-if="loading" @finish="loading = false" ref="loading_comp" />
         <HomePage v-if="loadingFinished" />
         <div hidden id="preload-img">
-            <img src="https://static.igem.wiki/teams/4787/wiki/img/home-newspaper.png" alt="1" @load="img_loaded" />
-            <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-1small.png" alt="2" @load="img_loaded" />
-            <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-3small.png" alt="3" @load="img_loaded" />
-            <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-4small.png" alt="4" @load="img_loaded" />
+            <img src="https://static.igem.wiki/teams/4787/wiki/img/home-newspaper-small.png" alt="1" @load="img_loaded" />
+            <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-1-small.png" alt="2" @load="img_loaded" />
+            <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-3-small.png" alt="3" @load="img_loaded" />
+            <img src="https://static.igem.wiki/teams/4787/wiki/img/home-bg-news-4-small.png" alt="4" @load="img_loaded" />
             <img src="https://static.igem.wiki/teams/4787/wiki/img/abstract-small.png" alt="5" @load="img_loaded" />
         </div>
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
