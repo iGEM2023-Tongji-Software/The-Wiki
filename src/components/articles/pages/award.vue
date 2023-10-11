@@ -35,7 +35,7 @@ onMounted(() => {
             <header2 text="Project Attributions" />
             <paragraph style="padding-top: 50px">
                 <p>Thanks all people for their effort and support to this project!</p>
-                <p>Please click <a href="/tongji-software/team/attributions">Attributions</a> for more details.</p>
+                <p>Please click <a href="/tongji-software/attributions">Attributions</a> for more details.</p>
             </paragraph>
 
             <header2 text="Project Description" />
