@@ -3,7 +3,7 @@
     <div class="icon">
       <LoadingIcon class="loading-img"/>
       <div id="ball" class="green"></div>
-      <p style="text-align: center;margin-top: 30px;font-family: GravitasOne, serif">Loading</p>
+      <p style="text-align: center;margin-top: 30px;font-family: 'Gravitas One', serif">Loading</p>
     </div>
   </div>
 </template>
