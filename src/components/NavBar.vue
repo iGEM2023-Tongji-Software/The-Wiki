@@ -49,7 +49,7 @@ const navItemClass = (i: number) => "nav-link"
                                 <router-link class="dropdown-item" to="/tongji-software/project/implementation" @click="nowActive = 2"> Implementation </router-link>
                             </li>
                             <li>
-                                <router-link class="dropdown-item" to="/tongji-software/project/model" @click="nowActive = 2"> Model </router-link>
+                                <router-link class="dropdown-item" to="/tongji-software/model" @click="nowActive = 2"> Model </router-link>
                             </li>
                             <li>
                                 <router-link class="dropdown-item" to="/tongji-software/engineering" @click="nowActive = 2"> Engineering </router-link>

@@ -82,7 +82,7 @@ onMounted(() => {
                     cas proteins. In the model, we fully considered biological significance such as epigenetic information and differences in CRISPR
                     systems, and improved the model architecture.
                 </p>
-                <p>Please click <a href="/tongji-software/project/model">Model</a> for more details.</p>
+                <p>Please click <a href="/tongji-software/model">Model</a> for more details.</p>
             </paragraph>
 
             <header2 text="Integrated Human Practices" />
