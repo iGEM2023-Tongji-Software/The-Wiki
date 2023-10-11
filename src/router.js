@@ -21,7 +21,7 @@ const routes = [
     { path: "/tongji-software/team", component: () => import("@/components/articles/pages/team-members.vue") },
     { path: "/tongji-software/team/collaboration", component: () => import("@/components/articles/pages/team-collaboration.vue") },
     { path: "/tongji-software/team/partnership", component: () => import("@/components/articles/pages/team-partnership.vue") },
-    { path: "/tongji-software/team/attribution", component: () => import("@/components/articles/pages/team-attribution.vue") },
+    { path: "/tongji-software/team/attributions", component: () => import("@/components/articles/pages/team-attribution.vue") },
     { path: "/tongji-software/award", component: () => import("@/components/articles/pages/award.vue") },
     { path: "/tongji-software/construction", component: () => import("@/components/articles/pages/construction.vue") },
 ]
